@@ -1,6 +1,6 @@
 # Step 4: Analysis & Results
 
-Now comes the fun part—analyzing the results of your docking experiment. This is where you figure out how well your ligand binds to the protein and what it might mean for further research.
+Now comes the best part—analyzing the results of your docking experiment. This is where you figure out how well your ligand binds to the protein and what it might mean for further research.
 
 ## Opening Your Results
 - **Output File:**  
@@ -25,9 +25,4 @@ Now comes the fun part—analyzing the results of your docking experiment. This 
 - **PubChem:**  
   For ligands, [PubChem](https://pubchem.ncbi.nlm.nih.gov/) provides detailed chemical properties. This info can help explain why certain interactions occur.
 
-## Final Thoughts
 Analyzing your results is about being curious and trying different approaches until you get the best insights. Don’t hesitate to experiment with various parameters or tools until you find what works best for you.
-
-Thanks for following along on my docking journey. If you have any questions or cool findings to share, feel free to reach out!
-
-Happy docking and analyzing!

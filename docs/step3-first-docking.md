@@ -6,26 +6,65 @@ Alright, now that everything’s set up, let’s get hands-on with our first doc
 
 1. **Get Your Protein & Ligand:**
    - Download a protein structure from [PDB](https://www.rcsb.org/). Pick one that looks interesting.
-   - Grab a ligand file from [PubChem](https://pubchem.ncbi.nlm.nih.gov/) or create one yourself.
+   - Grab a ligand file from [PubChem](https://pubchem.ncbi.nlm.nih.gov/) or create one yourself. Create one yourself? That sounds like a fun project! Maybe I'll dive into that later and set up a whole new repo for it.
+     
 
-2. **File Formats:**
-   Ensure your protein file is in PDB format and convert it to PDBQT (if needed) using AutoDock Tools. Do the same for your ligand file.
+## 2. File Formats: Converting Your Files
 
-## Running the Docking Experiment
+Before running the docking experiment, you need to make sure your protein and ligand files are in the correct format.
 
-Here’s a basic command using AutoDock Vina:
-```bash
-vina --receptor protein.pdbqt --ligand ligand.pdbqt --center_x 0 --center_y 0 --center_z 0 --size_x 20 --size_y 20 --size_z 20 --out output.pdbqt
-```
-- **Parameters Explained:**
-  - `--center_x, --center_y, --center_z`: Set the center of the docking grid.
-  - `--size_x, --size_y, --size_z`: Define the dimensions of your grid box.
+---
 
-Feel free to adjust these values based on your protein’s binding site.
+### **Protein File Preparation**
+1. **Open AutoDock Tools (ADT)**  
+   - Run the software using the terminal:  
+     ```bash
+     adt
+     ```
+   - Alternatively, open it from your application menu.
 
-## Some Tips
-- **Double-Check Conversions:** Wrong file formats can mess things up.
-- **Experiment:** Tweak the grid parameters and see how the results change.
-- **Backup Your Files:** Always keep a copy of your original data in the `data/` folder.
+2. **Load the Protein File**  
+   - Go to **File → Read Molecule** and select your downloaded **PDB** file.
 
-Once the run is complete, you'll have an `output.pdbqt` file with your docked poses. We’ll analyze that next!
+3. **Remove Unnecessary Molecules**  
+   - In the **Edit** menu, choose **Delete Water** to remove water molecules.
+   - If any unwanted ligands or cofactors exist, go to **Select → Select From String**, enter the residue name (e.g., "LIG"), and press **Delete**.
+
+4. **Add Polar Hydrogens**  
+   - Go to **Edit → Hydrogens → Add** and select **Polar Only**.  
+   - This step ensures correct hydrogen bonding interactions.
+
+5. **Assign Gasteiger Charges**  
+   - Go to **Edit → Charges → Compute Gasteiger**.  
+   - This ensures the correct electrostatic properties for docking.
+
+6. **Save as PDBQT**  
+   - Go to **Grid → Macromolecule → Choose** and select the protein structure.  
+   - Then, go to **File → Save as PDBQT** and name it **`protein.pdbqt`**.
+
+---
+
+### **Ligand File Preparation**
+1. **Obtain the Ligand File**  
+   - Download the ligand from **PubChem** or another source in **SDF** or **MOL2** format.
+
+2. **Convert to PDB Format (If Needed)**  
+   - Use OpenBabel to convert it to PDB:
+     ```bash
+     obabel input.sdf -O output.pdb
+     ```
+   - Alternatively, you can use ADT:
+     - **File → Read Molecule** → Open your **MOL2/SDF** file.
+     - **File → Save As** → Choose **PDB format**.
+
+3. **Prepare the Ligand in ADT**
+   - Load the PDB file (**File → Read Molecule**).
+   - Go to **Edit → Hydrogens → Add** and select **All Hydrogens**.
+   - Go to **Edit → Charges → Compute Gasteiger**.
+
+4. **Convert to PDBQT**  
+   - Go to **Ligand → Output → Save as PDBQT** and name it **`ligand.pdbqt`**.
+
+---
+
+If you're more comfortable with graphical interfaces, ADT makes it easy to prepare files. But learning command-line methods can save time, especially for batch processing in larger projects.

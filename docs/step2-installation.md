@@ -1,56 +1,62 @@
-# Step 2: Installation & Setup on Linux Mint
+Step 2: Installation & Setup on Linux Mint
 
-In this step, I’m walking you through setting up my Linux Mint environment for molecular docking. Linux Mint is great—it's lightweight, user-friendly, and perfect for running the tools we need.
+In this step, I'm walking you through setting up my Linux Mint environment for molecular docking. Linux Mint is awesome—lightweight, user-friendly, and perfect for running the tools we need.
 
-## What You'll Need
-- **Linux:** Make sure you’re running a proper installation.
-- **AutoDock Tools & AutoDock Vina:** These are the main tools I’m using.
-- **Python & Bash:** I’ll be using these for some automation and scripting.
-- **Internet Connection:** For downloading packages and tools.
+What You'll Need
 
-## Step-by-Step Setup
+Linux Mint (or any Linux distro): Make sure your system is updated.
 
-### 1. Update Your System
-Open your terminal and run:
-```bash
+Essential Applications:
+
+Chimera
+
+AutoDock Tools & AutoDock Vina
+
+PRAS
+
+Yasara
+
+PyMOL
+
+
+Python & Bash: For automation and scripting.
+
+Internet Connection: To download all the necessary packages.
+
+
+Step-by-Step Setup
+
+1. Update Your System
+
+Before you do anything, open your terminal and run:
+
 sudo apt update && sudo apt upgrade
-```
-This ensures everything is up-to-date.
 
-### 2. Install AutoDock Tools and Vina
-For AutoDock Vina, you can try installing via apt:
-```bash
-sudo apt install autodock-vina
-```
-For AutoDock Tools, download it from the official site. Follow the instructions provided on their website.
+This ensures your system is up-to-date with the latest software.
 
-- **Step 1: Download MGLTools**  
-  Since ADT is actually a part of the MGLTools package, you'll need to download the full package first. Make sure you get the version compatible with your Linux setup.
+2. Download and Install the Applications
 
-- **Step 2: Launch ADT**  
-  Once you've installed MGLTools, launching ADT is as simple as running:
-  ```bash
-  adt
-  ```
-You might run into a few snags during this step, but, it’s nothing too tough to handle. Just take your time, follow the installation instructions carefully, and you’ll be good to go.
+Instead of getting into all the nitty-gritty of terminal commands for each app, just head over to their official websites and download the latest versions.
 
-### 3. Verify Python Installation
-Check your Python version:
-```bash
+3. Verify Python Installation
+
+Make sure you have Python installed by checking the version:
+
 python3 --version
-```
-If you need Python 3:
-```bash
+
+If you need to install Python 3, run:
+
 sudo apt install python3
-```
 
-### 4. Set Up Your Workspace
-Create a neat directory structure:
-```bash
+4. Set Up Your Workspace
+
+Create a clean directory structure to keep your project organized:
+
 mkdir -p ~/docking_project/{docs,notebooks,scripts,data}
-```
-This helps keep everything organized. 
-I’m a total neat freak Haha
 
-## Wrapping Up
-That’s it for the installation part! I tried to keep things simple. If you run into any issues, drop a note in the repo’s issues section. Next up, we’ll run our first docking experiment!
+Staying organized makes life easier!
+
+Wrapping Up
+
+That’s it for the installation part! By updating your system and downloading the necessary apps from their official websites, you’re all set up for some molecular docking fun. If you run into any issues, just drop a note in the repo’s issues section. Next up, we’ll run our first docking experiment!
+

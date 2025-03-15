@@ -13,7 +13,7 @@ and i'm working on Linux Mint.
 - **[Step 5: Docking Execution](docs/docking-execution.md)**
 - **[Step 6: Analysis & Results](docs/analysis.md)**
 - **[Step 7: Troubleshooting & Optimization](docs/troubleshooting.md)**
-- **[Step 8: Advanced Topics & Future Directions](docs/advanced.md)**
+- **[Step 8: Advanced Topics](docs/advanced.md)**
 
 
 Feel free to browse around, learn with me, and maybe even try it yourself. I’ll keep updating this repo as I learn more. Happy docking!

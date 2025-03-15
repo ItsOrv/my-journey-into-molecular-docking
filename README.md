@@ -8,7 +8,12 @@ and i'm working on Linux Mint.
 ## What's Inside
 - **[Step 1: Introduction](docs/intro.md)**
 - **[Step 2: Installation & Setup on Linux](docs/installation.md)**
-- **[Step 3: My First Docking Experiment](docs/first-docking.md)**
-- **[Step 4: Analysis & Results](docs/analysis.md)**
+- **[Step 3: Protein Preparation](docs/protein-preparation.md)**
+- **[Step 4: Ligand Preparation](docs/ligand-preparation.md)**
+- **[Step 5: Docking Execution](docs/docking-execution.md)**
+- **[Step 6: Analysis & Results](docs/analysis.md)**
+- **[Step 7: Troubleshooting & Optimization](docs/troubleshooting.md)**
+- **[Step 8: Advanced Topics & Future Directions](docs/advanced.md)**
+
 
 Feel free to browse around, learn with me, and maybe even try it yourself. I’ll keep updating this repo as I learn more. Happy docking!
